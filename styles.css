@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   background-color: #fdfdfd;
   color: #222;
   text-align: center;
@@ -19,18 +19,21 @@ body {
   padding: 20px;
 }
 
+.name-left,
+.name-right {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600; /* más grueso */
+  font-size: clamp(60px, 15vw, 160px);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
 .header-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-}
-
-.name-left,
-.name-right {
-  font-size: clamp(60px, 15vw, 160px);
-  font-weight: 600;
 }
 
 .slideshow-container-vertical {
@@ -76,7 +79,7 @@ body {
 
 .fade {
   animation-name: fade;
-  animation-duration: 0.1s; /* mantiene el efecto tira */
+  animation-duration: 0.1s; /* efecto “tira de fotos” */
 }
 
 @keyframes fade {
@@ -84,17 +87,16 @@ body {
   to { opacity: 1 }
 }
 
-/* 📱 Responsive para pantallas chicas */
+/* 📱 Responsive */
 @media (max-width: 600px) {
   .header-row {
     flex-direction: column;
     gap: 15px;
   }
 
+  /* Mantiene el mismo tamaño de imagen que en desktop */
   .slideshow-container-vertical {
-    width: 70vw;
-    max-width: 250px;
-    height: auto;
-    aspect-ratio: 2/3; /* mantiene forma vertical */
+    width: 220px;
+    height: 300px;
   }
 }

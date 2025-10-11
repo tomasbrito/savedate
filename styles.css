@@ -102,7 +102,7 @@ body {
   /* ↓↓↓ Eliminar espacio superior en mobile ↓↓↓ */
   body {
     justify-content: flex-start; /* ya no centrado vertical */
-    padding-top: 80px;          /* margen mínimo arriba */
+    padding-top: 70px;          /* margen mínimo arriba */
     min-height: auto;           /* evita el empuje del 100vh */
   }
 }
